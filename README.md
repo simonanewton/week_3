@@ -2,11 +2,7 @@
 
 ## Description 
 
-This project creates an application that generates a random password based on user-selected criteria. This app will run in the browser and feature dynamically updated HTML and CSS powered by your JavaScript code. It will also feature a clean and polished user interface and be responsive, ensuring that it adapts to multiple screen sizes.
-
-* AS AN employee with access to sensitive data
-* I WANT to randomly generate a password that meets certain criteria
-* SO THAT I can create a strong password that provides greater security
+This project creates a webpage with a button that generates a random password based on inputs chosen by the user. The user is prompted to choose a password length and whether to include lowercase, uppercase, numbers, or symbols in the generated password. The program then randomly chooses functions that return values that the user has chosen to include for as many times as the chosen length. The generated password is then written to the webpage for the user to copy and use at their discretion.
 
 ## Goals
 
@@ -57,9 +53,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
-## Links
-
-Github Repository: https://github.com/simonanewton/week_3
-
-GitHub Pages: https://simonanewton.github.io/week_3/
