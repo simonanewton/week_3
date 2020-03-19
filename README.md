@@ -30,6 +30,10 @@ This project creates an application that generates a random password based on us
 
 * https://owasp.org/www-community/password-special-characters
 
+* https://codehandbook.org/generate-random-string-characters-in-javascript/
+
+* http://stevehardie.com/2009/09/character-code-list-char-code/
+
 ## License
 
 MIT License
@@ -53,3 +57,9 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+## Links
+
+Github Repository: https://github.com/simonanewton/week_3
+
+GitHub Pages: https://simonanewton.github.io/week_3/
