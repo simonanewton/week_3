@@ -25,23 +25,28 @@ function getUserInputs() {
 
 // returns a random lowercase letter from CharCode
 function randomLowercase() {
-	return String.fromCharCode(Math.floor((Math.random() * (122 - 97 + 1)) + 97));
+	var ascii_high = 122;
+	var ascii_low = 97;
+	return String.fromCharCode(Math.floor((Math.random() * (ascii_high - ascii_low + 1)) + ascii_low));
 }
 
 // returns a random uppercase letter from CharCode
 function randomUppercase() {
-	return String.fromCharCode(Math.floor((Math.random() * (90 - 65 + 1)) + 65));
-}
+	var ascii_high = 90;
+	var ascii_low = 65;
+	return String.fromCharCode(Math.floor((Math.random() * (ascii_high - ascii_low + 1)) + ascii_low));}
 
 // returns a random number from CharCode
 function randomNumber() {
-	return String.fromCharCode(Math.floor((Math.random() * (57 - 48 + 1)) + 48));
-}
+	var ascii_high = 57;
+	var ascii_low = 48;
+	return String.fromCharCode(Math.floor((Math.random() * (ascii_high - ascii_low + 1)) + ascii_low));}
 
 // returns a random symbol from CharCode
 function randomSymbol() {
-	return String.fromCharCode(Math.floor((Math.random() * (47 - 32 + 1)) + 32));
-}
+	var ascii_high = 47;
+	var ascii_low = 32;
+	return String.fromCharCode(Math.floor((Math.random() * (ascii_high - ascii_low + 1)) + ascii_low));}
 
 // returns an array of functions chosen based on user inputs
 function enabledFunctions(lowercase, uppercase, numbers, symbols) {
@@ -58,11 +63,12 @@ function enabledFunctions(lowercase, uppercase, numbers, symbols) {
 // initializes an empty string, then adds characters to it using a randomly selected function based on user inputs
 function generatePassword(length, lowercase, uppercase, numbers, symbols) {
 	var passwordString = "";
-
-	var includedCharacters = enabledFunctions(lowercase, uppercase, numbers, symbols);
-
-	for (var i = 0; i < length; i++)
-		passwordString += includedCharacters[Math.floor(Math.random() * includedCharacters.length)]();
+	var includedCharTypes = enabledFunctions(lowercase, uppercase, numbers, symbols);
+	
+	for (var i = 0; i < length; i++) {
+		var randomCharacter = includedCharTypes[Math.floor(Math.random() * includedCharTypes.length)]();
+		passwordString += randomCharacter;
+	}
 
 	return passwordString;
 }
