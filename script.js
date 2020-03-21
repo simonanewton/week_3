@@ -1,4 +1,4 @@
-// returns whether length is greater than 8 and at least one character type is selected
+// returns whether length is greater than 8 but less than 128 and at least one character type is selected
 function validInputs(length, lowercase, uppercase, numbers, symbols) {
 	return ((length >= 8 && length <= 128) && (lowercase || uppercase || numbers || symbols));
 }
@@ -12,7 +12,7 @@ function getUserInputs() {
 	var symbols = confirm("Do you want to include symbols?");
 
 	while (!validInputs(length, lowercase, uppercase, numbers, symbols)) {
-		alert("You must choose a length between 8-12 and choose at least one type of character to include.");
+		alert("You must choose a password length between 8-128 and choose at least one type of character to include.");
 		length = prompt("How many characters do you want for your password? (8-128)");
 		lowercase = confirm("Do you want to include lowercase letters?");
 		uppercase = confirm("Do you want to include uppercase letters?");
@@ -70,7 +70,7 @@ function generatePassword(length, lowercase, uppercase, numbers, symbols) {
 // creates button variable
 var generateBtn = document.querySelector("#generate");
 
-// obtains user inputs then writes password to the #password input
+// obtains user inputs and uses them to generate a random password, then writes it to the #password input
 function writePassword() {
 	var userInputs = getUserInputs();
 	var password = generatePassword(userInputs[0], userInputs[1], userInputs[2], userInputs[3], userInputs[4]);
